@@ -1,9 +1,13 @@
-import { useEffect } from 'react';
+import { useEffect, lazy } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchContacts } from 'redux/operations';
-import { Form } from './Form/Form';
-import { Phonebook, Contacts } from './App.styled';
-import { ContactList } from './Contact-List/Contact-list';
+import { Route, Routes } from 'react-router-dom';
+
+
+// import { Form } from './Form/Form';
+// import { Phonebook, Contacts } from './App.styled';
+// import { ContactList } from './Contact-List/Contact-list';
+
 // const CONTACTS = JSON.parse(window.localStorage.getItem('contacts')) ?? [
 //   { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
 //   { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
@@ -19,12 +23,8 @@ export const App = () => {
    }, [dispatch]);
   
   return (
-    <Phonebook>
-      <h2>Phonebook</h2>
-      <Contacts>
-        <Form />
-        <ContactList />
-      </Contacts>
-    </Phonebook>
+    <Routes>
+     
+    </Routes>
   );
 };
