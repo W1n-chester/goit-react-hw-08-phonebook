@@ -4,7 +4,9 @@ import { fetchContacts } from 'redux/operations';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';
 const HomePage = lazy(() => import('../pages/Home/Home'));
-const PhoneBookPage = lazy(() => import('../pages/Phonebook/Phonebook'))
+const PhoneBookPage = lazy(() => import('../pages/Phonebook/Phonebook'));
+const LoginPage = lazy(() => import('../pages/Login/Login'));
+const RegisterPage = lazy(() => import('../pages/Register/Register'));
 // import { Form } from './Form/Form';
 // import { Phonebook, Contacts } from './App.styled';
 // import { ContactList } from './Contact-List/Contact-list';
@@ -22,12 +24,14 @@ export const App = () => {
   //  useEffect(() => {
   //    dispatch(fetchContacts());
   //  }, [dispatch]);
-  
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
-        <Route path="/contacts" element={<PhoneBookPage/>} />
+        <Route path="/contacts" element={<PhoneBookPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Route>
     </Routes>
   );
