@@ -2,8 +2,9 @@ import { useEffect, lazy } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchContacts } from 'redux/operations';
 import { Route, Routes } from 'react-router-dom';
-
-
+import { Layout } from './Layout';
+const HomePage = lazy(() => import('../pages/Home/Home'));
+const PhoneBookPage = lazy(() => import('../pages/Phonebook/Phonebook'))
 // import { Form } from './Form/Form';
 // import { Phonebook, Contacts } from './App.styled';
 // import { ContactList } from './Contact-List/Contact-list';
@@ -16,15 +17,18 @@ import { Route, Routes } from 'react-router-dom';
 // ];
 
 export const App = () => {
-   const dispatch = useDispatch();
+  //  const dispatch = useDispatch();
 
-   useEffect(() => {
-     dispatch(fetchContacts());
-   }, [dispatch]);
+  //  useEffect(() => {
+  //    dispatch(fetchContacts());
+  //  }, [dispatch]);
   
   return (
     <Routes>
-     
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="/contacts" element={<PhoneBookPage/>} />
+      </Route>
     </Routes>
   );
 };
