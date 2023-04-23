@@ -8,8 +8,6 @@ const styles = {
   container: {
     minHeight: 'calc(100vh - 50px)',
     display: 'blok',
-    // alignItems: 'center',
-    // justifyContent: 'center',
   },
   title: {
     textAlign: 'center',

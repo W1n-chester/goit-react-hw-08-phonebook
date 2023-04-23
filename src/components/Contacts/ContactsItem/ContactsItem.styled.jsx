@@ -8,7 +8,6 @@ export const Contact = styled.p`
     border: 1px, solid, black;
     border-radius: 5px;
     background-color: white;
-    /* border-style: none; */
 
     cursor: pointer;
     :hover {

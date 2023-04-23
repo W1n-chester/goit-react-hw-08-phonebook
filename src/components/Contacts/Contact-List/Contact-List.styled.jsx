@@ -1,8 +1,6 @@
 import styled from '@emotion/styled';
 export const Container = styled.div`
   display: block;
-  /* width: 500px; */
-
   padding-top: 10px;
   padding-bottom: 20px;
 

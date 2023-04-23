@@ -2,7 +2,7 @@ import { Contact } from './ContactsItem.styled';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/operations';
 export const Item = ({ name, number, id }) => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   return (
     <Contact>

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addContact } from 'redux/operations';
-// import { nanoid } from 'nanoid';
 import { ContactForm, Label } from './Form.styled';
 export const Form = () => {
   const [name, setName] = useState('');
@@ -26,7 +25,7 @@ export const Form = () => {
         break;
     }
   };
- 
+
   const createContact = () => {
     const newContact = { name, number };
 
