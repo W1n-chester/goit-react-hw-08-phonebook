@@ -5,13 +5,14 @@ export const Contact = styled.p`
   width: 350px;
   justify-content: space-between;
   button {
+    border: 1px, solid, black;
     border-radius: 5px;
     background-color: white;
-    border-style: none;
+    /* border-style: none; */
 
     cursor: pointer;
     :hover {
-      background-color: gold;
+      background-color: #e84a5f;
     }
   }
 `;

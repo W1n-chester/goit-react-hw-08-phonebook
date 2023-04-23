@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addContact } from 'redux/operations';
 // import { nanoid } from 'nanoid';
-import { ContactForm, Name, Number } from './Form.styled';
+import { ContactForm, Label } from './Form.styled';
 export const Form = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -43,7 +43,7 @@ export const Form = () => {
 
   return (
     <ContactForm onSubmit={formSubmit}>
-      <Name>
+      <Label>
         Name:
         <input
           type="text"
@@ -54,8 +54,8 @@ export const Form = () => {
           value={name}
           onChange={writeInput}
         />
-      </Name>
-      <Number>
+      </Label>
+      <Label>
         Tell:
         <input
           type="tel"
@@ -66,7 +66,7 @@ export const Form = () => {
           value={number}
           onChange={writeInput}
         />
-      </Number>
+      </Label>
       <button type="submit">Add Contact</button>
     </ContactForm>
   );

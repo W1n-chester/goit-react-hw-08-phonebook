@@ -1,21 +1,21 @@
 import styled from '@emotion/styled';
 export const Container = styled.div`
   display: block;
-  width: 500px;
-  
+  /* width: 500px; */
+
   padding-top: 10px;
-  
+  padding-bottom: 20px;
+
   h2 {
     display: block;
-    width: 200px;
+    text-align: center;
     margin: 0 auto;
   }
-  ul {
-    overflow: scroll;
-    border: 1px solid gold;
+  ol {
+    border: 1px solid ;
     display: block;
-    width: 400px;
-    height: 200px;
+    max-width: 400px;
+    min-height: 100px;
     margin: 0 auto;
   }
 `;

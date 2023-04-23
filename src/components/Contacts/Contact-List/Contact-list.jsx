@@ -12,18 +12,26 @@ export const ContactList = () => {
   const visibleContacts = contacts.filter(contact =>
     contact.name.toLocaleLowerCase().includes(normFilter)
   );
-
+visibleContacts.sort(function (a, b) {
+  const nameA = a.name.toLowerCase();
+    const nameB = b.name.toLowerCase();
+  if (nameA < nameB)
+    //сортируем строки по возрастанию
+    return -1;
+  if (nameA > nameB) return 1;
+  return 0; // Никакой сортировки
+});
   return (
     <Container>
       <h2>Contacts</h2>
       <Filter />
-      <ul>
+      <ol>
         {visibleContacts.map(contact => (
           <li key={contact.id}>
             <Item name={contact.name} number={contact.number} id={contact.id} />
           </li>
         ))}
-      </ul>
+      </ol>
     </Container>
   );
 };

@@ -10,7 +10,7 @@ export const Title = styled.label`
     margin: 10px auto;
     text-align: center;
     :hover {
-      border-color: gold;
+      border-color: #e84a5f;
     }
   }
 `;
