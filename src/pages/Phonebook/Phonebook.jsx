@@ -1,22 +1,24 @@
 import { ContactList } from "components/Contacts/Contact-List/Contact-list";
 import { Form } from "components/Contacts/Form/Form";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { fetchContacts } from "redux/operations";
 
 
 const styles = {
   container: {
     minHeight: 'calc(100vh - 50px)',
-    display: 'flex',
+    display: 'blok',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  // title: {
-  //   fontWeight: 500,
-  //   fontSize: 48,
-  //   textAlign: 'center',
-  // },
+  }
 };
 
-export default function Home() {
+export default function PhoneBook() {
+  const dispatch = useDispatch();
+   useEffect(() => {
+     dispatch(fetchContacts());
+   }, [dispatch]);
   return (
     <div style={styles.container}>
       <Form />

@@ -20,7 +20,7 @@ export const ContactList = () => {
       <ul>
         {visibleContacts.map(contact => (
           <li key={contact.id}>
-            <Item name={contact.name} number={contact.phone} id={contact.id} />
+            <Item name={contact.name} number={contact.number} id={contact.id} />
           </li>
         ))}
       </ul>

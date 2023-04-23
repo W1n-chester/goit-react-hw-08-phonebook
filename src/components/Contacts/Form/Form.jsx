@@ -26,15 +26,9 @@ export const Form = () => {
         break;
     }
   };
-  //  if (contacts.length > 0) {
-  //    contacts.find(contact => contact.name === newContact.name)
-  //      ? alert(`${newContact.name} is already in contacts`)
-  //      : dispatch(addContact(newContact));
-  //    return;
-  //  }
-  //  dispatch(addContact(newContact));
+ 
   const createContact = () => {
-    const newContact = { name, phone: number };
+    const newContact = { name, number };
 
     contacts.find(contact => contact.name === newContact.name)
       ? alert(`${newContact.name} is already in contacts`)
